@@ -19,7 +19,6 @@ struct HomeView: View {
     
     
     var body: some View {
-        ZStack {
             VStack(spacing: 35) {
                 
                 VStack {
@@ -71,10 +70,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
-            CurrentlyPlayingBar(imageName: "1-song", songName: "Karpur Gauram (Rock)")
-                .offset(y:300)
-        }
-        .background(.black)
+            .preferredColorScheme(.dark)
     }
 }
 

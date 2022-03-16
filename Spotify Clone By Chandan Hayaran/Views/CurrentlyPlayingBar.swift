@@ -11,7 +11,8 @@ import Marquee
 struct CurrentlyPlayingBar: View {
     var imageName: String
     var songName: String
-    
+    @State var heartIcon = false
+    @State var playIcon = false
     @State private var go = false
     
     var body: some View {
@@ -36,11 +37,17 @@ struct CurrentlyPlayingBar: View {
             
             HStack(spacing: 20) {
                 Image(systemName: "hifispeaker.and.appletv")
-                Image(systemName: "heart")
-                Image(systemName: "play.fill")
+                Toggle(isOn: $heartIcon, label: {
+                })
+                .toggleStyle(heartToggle())
+                
+                Toggle(isOn: $playIcon, label: {
+                })
+                .toggleStyle(playToggle())
             }
             .font(.system(size: 25))
             .foregroundColor(.white)
+            .padding()
        
             Spacer()
                     
@@ -49,10 +56,63 @@ struct CurrentlyPlayingBar: View {
             .opacity(0.2))
             .frame(height: 70)
             
-            .preferredColorScheme(.dark)
+            
             
     }// body
+
 }
+
+
+struct heartToggle: ToggleStyle {
+ 
+    func makeBody(configuration: Self.Configuration) -> some View {
+ 
+        return HStack {
+ 
+            configuration.label
+ 
+            Image(systemName: configuration.isOn ? "heart.fill" : "heart")
+                .onTapGesture {
+                    
+                    if configuration.isOn {
+                        print("heart.fill")
+                    }
+                    else {
+                        print("heart")
+                    }
+
+                    configuration.isOn.toggle()
+                }
+        }
+ 
+    }
+}
+
+struct playToggle: ToggleStyle {
+ 
+    func makeBody(configuration: Self.Configuration) -> some View {
+ 
+        return HStack {
+ 
+            configuration.label
+ 
+            Image(systemName: configuration.isOn ? "pause.fill" : "play.fill")
+                .onTapGesture {
+                    
+                    if configuration.isOn {
+                        print("pause.fill")
+                    }
+                    else {
+                        print("play.fill")
+                    }
+                    
+                    configuration.isOn.toggle()
+                }
+        }
+ 
+    }
+}
+
 
 struct CurrentlyPlayingBar_Previews: PreviewProvider {
     static var previews: some View {

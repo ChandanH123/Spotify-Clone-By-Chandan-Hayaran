@@ -11,10 +11,10 @@
 		1782F13727E1E2C7008110F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F13627E1E2C7008110F3 /* ContentView.swift */; };
 		1782F13927E1E2C8008110F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1782F13827E1E2C8008110F3 /* Assets.xcassets */; };
 		1782F13C27E1E2C8008110F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1782F13B27E1E2C8008110F3 /* Preview Assets.xcassets */; };
-		1782F13E27E1E2C8008110F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F13D27E1E2C8008110F3 /* Persistence.swift */; };
-		1782F14127E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1782F13F27E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld */; };
 		1782F14A27E1EA98008110F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F14927E1EA98008110F3 /* HomeView.swift */; };
 		1782F19527E1F9D3008110F3 /* RecentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F19427E1F9D3008110F3 /* RecentCard.swift */; };
+		17C0EBAE27E27ECD0001AA38 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0EBAD27E27ECD0001AA38 /* SearchView.swift */; };
+		17C0EBB027E280660001AA38 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0EBAF27E280660001AA38 /* SongView.swift */; };
 		17D3CEB527E2182A00C68EA5 /* ArtistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3CEB427E2182A00C68EA5 /* ArtistCard.swift */; };
 		17D3CEB727E223BF00C68EA5 /* CurrentlyPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */; };
 		17D3CEBD27E22EB500C68EA5 /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = 17D3CEBC27E22EB500C68EA5 /* Marquee */; };
@@ -26,11 +26,11 @@
 		1782F13627E1E2C7008110F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1782F13827E1E2C8008110F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1782F13B27E1E2C8008110F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1782F13D27E1E2C8008110F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		1782F14027E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotify_Clone_By_Chandan_Hayaran.xcdatamodel; sourceTree = "<group>"; };
 		1782F14927E1EA98008110F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1782F19327E1EE9E008110F3 /* Spotify-Clone-By-Chandan-Hayaran-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Spotify-Clone-By-Chandan-Hayaran-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1782F19427E1F9D3008110F3 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
+		17C0EBAD27E27ECD0001AA38 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		17C0EBAF27E280660001AA38 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		17D3CEB427E2182A00C68EA5 /* ArtistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCard.swift; sourceTree = "<group>"; };
 		17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyPlayingBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +70,6 @@
 				1782F14727E1E9F2008110F3 /* Views */,
 				1782F14827E1EA09008110F3 /* App */,
 				1782F13827E1E2C8008110F3 /* Assets.xcassets */,
-				1782F13D27E1E2C8008110F3 /* Persistence.swift */,
-				1782F13F27E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld */,
 				1782F13A27E1E2C8008110F3 /* Preview Content */,
 			);
 			path = "Spotify Clone By Chandan Hayaran";
@@ -92,6 +90,8 @@
 				1782F19427E1F9D3008110F3 /* RecentCard.swift */,
 				17D3CEB427E2182A00C68EA5 /* ArtistCard.swift */,
 				17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */,
+				17C0EBAD27E27ECD0001AA38 /* SearchView.swift */,
+				17C0EBAF27E280660001AA38 /* SongView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,11 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1782F14127E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld in Sources */,
-				1782F13E27E1E2C8008110F3 /* Persistence.swift in Sources */,
 				1782F19527E1F9D3008110F3 /* RecentCard.swift in Sources */,
 				1782F13727E1E2C7008110F3 /* ContentView.swift in Sources */,
 				1782F14A27E1EA98008110F3 /* HomeView.swift in Sources */,
+				17C0EBB027E280660001AA38 /* SongView.swift in Sources */,
+				17C0EBAE27E27ECD0001AA38 /* SearchView.swift in Sources */,
 				17D3CEB727E223BF00C68EA5 /* CurrentlyPlayingBar.swift in Sources */,
 				17D3CEB527E2182A00C68EA5 /* ArtistCard.swift in Sources */,
 				1782F13527E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift in Sources */,
@@ -412,19 +412,6 @@
 			productName = Marquee;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		1782F13F27E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1782F14027E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodel */,
-			);
-			currentVersion = 1782F14027E1E2C8008110F3 /* Spotify_Clone_By_Chandan_Hayaran.xcdatamodel */;
-			path = Spotify_Clone_By_Chandan_Hayaran.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1782F12927E1E2C7008110F3 /* Project object */;
 }

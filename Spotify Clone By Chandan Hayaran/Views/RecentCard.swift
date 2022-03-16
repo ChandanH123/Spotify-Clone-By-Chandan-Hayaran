@@ -32,7 +32,7 @@ struct RecentCard: View {
             .background(RoundedRectangle(cornerRadius: 8)
             .opacity(0.2))
             .frame(width:150, height: 70)
-            .preferredColorScheme(.dark)
+            
             
     }// body
 }// struct

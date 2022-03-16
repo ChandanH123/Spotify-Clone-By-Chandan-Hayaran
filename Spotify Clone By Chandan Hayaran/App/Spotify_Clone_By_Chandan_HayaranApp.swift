@@ -9,13 +9,10 @@ import SwiftUI
 
 @main
 struct Spotify_Clone_By_Chandan_HayaranApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            HomeView()
+            ContentView()
         }
     }
 }
