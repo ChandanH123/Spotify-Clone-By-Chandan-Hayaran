@@ -19,58 +19,67 @@ struct HomeView: View {
     
     
     var body: some View {
+        NavigationView {
             VStack(spacing: 35) {
-                
-                VStack {
-                    HStack(spacing: 15) {
-                        Text("Good afternoon")
-                            .font(Font.custom("Gotham-Black", size: 25))
-                            .frame(width: 210)
-                            .foregroundColor(.white)
-                        Spacer()
-                        
+                    
+                    VStack {
                         HStack(spacing: 15) {
-                            Image(systemName: "bell")
-                            Image(systemName: "clock.arrow.circlepath")
-                            Image(systemName: "gearshape")
-                        }
-                        .font(.system(size: 25))
-                        .foregroundColor(.white)
-                    }
-                    .padding()
-                    
-                    LazyVGrid(columns: columns, spacing: 15) {
-                        ForEach((1...6), id: \.self) { index in
-                            RecentCard(imageName: "\(index)-song", songName: (songNameArray[index-1]))
-                        }
-                    }
-                    .padding(.horizontal, 10)
-                }
-                
-                
-                VStack() {
-                    HStack(spacing: 15) {
-                        Text("Good afternoon")
-                            .font(Font.custom("Gotham-Black", size: 25))
-                            .frame(width: 210)
+                            Text("Good afternoon")
+                                .font(Font.custom("Gotham-Black", size: 25))
+                                .frame(width: 210)
+                                .foregroundColor(.white)
+                            Spacer()
+                            
+                            HStack(spacing: 15) {
+                                Image(systemName: "bell")
+                                Image(systemName: "clock.arrow.circlepath")
+                                Image(systemName: "gearshape")
+                            }
+                            .font(.system(size: 25))
                             .foregroundColor(.white)
-                        Spacer()
-                    }
-                    .padding()
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        }
+                        .padding()
+                        
+                        
+                        LazyVGrid(columns: columns, spacing: 15) {
                             ForEach((1...6), id: \.self) { index in
-                                ArtistCard(artistImageName: "\(index)-artist", artistName: artistNameArray[index-1])
+                                NavigationLink(destination: SongView(artistName: artistNameArray[index-1], songImageName: "\(index)-song", songName: songNameArray[index-1])) {
+                                    RecentCard(imageName: "\(index)-song", songName: (songNameArray[index-1]))
+                                }
                             }
                         }
-                        .padding(.vertical, 20)
+                        .padding(.horizontal, 10)
+                        
                     }
-                }
                 
-                Spacer()
-            }
+                    
+                    
+                    VStack() {
+                        HStack(spacing: 15) {
+                            Text("Good afternoon")
+                                .font(Font.custom("Gotham-Black", size: 25))
+                                .frame(width: 210)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
+                        .padding()
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 20) {
+                                ForEach((1...6), id: \.self) { index in
+                                    ArtistCard(artistImageName: "\(index)-artist", artistName: artistNameArray[index-1])
+                                }
+                            }
+                            .padding(.vertical, 20)
+                        }
+                    }
+                    
+                    Spacer()
+                }
+            .offset(y: -90)
             .preferredColorScheme(.dark)
+        }
+        
     }
 }
 

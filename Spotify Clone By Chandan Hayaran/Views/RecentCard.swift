@@ -31,7 +31,7 @@ struct RecentCard: View {
             }// hstack
             .background(RoundedRectangle(cornerRadius: 8)
             .opacity(0.2))
-            .frame(width:150, height: 70)
+            .frame(width:150)
             
             
     }// body
