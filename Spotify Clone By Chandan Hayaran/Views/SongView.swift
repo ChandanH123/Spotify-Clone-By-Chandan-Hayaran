@@ -63,13 +63,21 @@ struct SongView: View {
                 }
                 .padding()
                 
-                ZStack {
+                VStack {
                     RoundedRectangle(cornerRadius: 20)
                         .foregroundColor(.gray)
                         .frame(height: 4)
                         .overlay(Circle()
                         .size(width: 15, height: 15)
                                     .offset(y: -5))
+                    HStack {
+                        Text("0:00")
+                            .font(Font.custom("GothamBook", size: 15))
+                        Spacer()
+                        Text("4:03")
+                            .font(Font.custom("GothamBook", size: 15))
+                    }
+                    .opacity(0.8)
                 }
                 .padding()
             }
@@ -84,10 +92,11 @@ struct SongView: View {
                 Toggle(isOn: $playIcon, label: {
                 })
                 .toggleStyle(playToggle())
-                    .font(Font.system(size: 50))
+                    .font(Font.system(size: 30))
                     .foregroundColor(.black)
                     .background(Circle().size(width: 80, height: 80)
-                                    .offset(x: -19, y: -17))
+                                    .offset(x: -26, y: -25))
+                    
                 Spacer()
                 Image(systemName: "forward.end.fill")
                     .font(Font.system(size: 30))
@@ -96,6 +105,7 @@ struct SongView: View {
                     .font(Font.system(size: 30))
                     .rotationEffect(.degrees(180))
             }.padding()
+                .offset(y: -10)
             
             Spacer()
         }
