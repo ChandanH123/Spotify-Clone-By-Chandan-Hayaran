@@ -26,11 +26,10 @@ struct SongView: View {
                     Spacer()
                     VStack {
                         Text("Playing From Artist")
-                            .font(Font.custom("GothamBook", size: 14))
+                            .font(Font.custom("GothamBook", size: 12))
                         .textCase(.uppercase)
                         Text(artistName)
-                            .font(Font.custom("Gotham-Black", size: 16).uppercaseSmallCaps())
-                        .textCase(.uppercase)
+                            .font(Font.custom("Gotham-Black", size: 16))
                     }
                     Spacer()
                     
