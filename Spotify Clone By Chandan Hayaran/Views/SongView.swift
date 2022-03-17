@@ -22,6 +22,7 @@ struct SongView: View {
                 HStack {
                     Image(systemName: "chevron.down")
                         .font(Font.system(size: 30))
+                        .opacity(0)
                     Spacer()
                     VStack {
                         Text("Playing From Artist")
@@ -99,7 +100,7 @@ struct SongView: View {
             
             Spacer()
         }
-        .offset(y: -50)
+        .offset(y: -70)
         .preferredColorScheme(.dark)
     }
 }

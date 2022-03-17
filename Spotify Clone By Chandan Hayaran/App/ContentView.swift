@@ -11,9 +11,10 @@ struct ContentView: View {
 
     let songNameArray:[String] = ["Karpur Gauram", "One More Light", "My Universe", "Every Second", "Alag Aasmaan", "When We Feel Young"]
     
+    
     var body: some View {
         
-        ZStack {
+
             TabView {
                 HomeView()
                   .tabItem {
@@ -36,12 +37,7 @@ struct ContentView: View {
                     Text("Profile")
                       
                   }
-            }
-            
-            CurrentlyPlayingBar(imageName: "1-song", songName:songNameArray[0])
-                .offset(y: 280)
-        }
-        
+            }        
     }
 }
 

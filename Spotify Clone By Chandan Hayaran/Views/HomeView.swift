@@ -75,11 +75,14 @@ struct HomeView: View {
                     }
                     
                     Spacer()
+                
+                CurrentlyPlayingBar(imageName: "1-song", songName:songNameArray[0])
+                    .offset(y: -50)
                 }
-            .offset(y: -90)
+            .offset(y: -40)
             .preferredColorScheme(.dark)
         }
-        
+
     }
 }
 
