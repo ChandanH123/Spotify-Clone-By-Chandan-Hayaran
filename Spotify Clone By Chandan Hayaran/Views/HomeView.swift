@@ -11,7 +11,8 @@ struct HomeView: View {
     
     let songNameArray:[String] = ["Karpur Gauram", "One More Light", "My Universe", "Every Second", "Alag Aasmaan", "When We Feel Young"]
     let columns = [
-            GridItem(.adaptive(minimum: 175))
+            GridItem(.flexible()),
+            GridItem(.flexible())
         ]
     
     let artistNameArray:[String] = ["Nandish The Band", "Linkin Park", "Coldplay", "Mina Okabe", "Anuv Jain", "When Chai Met Toast"]

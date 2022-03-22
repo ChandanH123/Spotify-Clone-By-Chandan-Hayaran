@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1781247A27EA34C300641BFB /* CustomPlaceholderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */; };
+		1781247C27EA54B800641BFB /* TopGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247B27EA54B800641BFB /* TopGenresView.swift */; };
+		1781247E27EA6A2800641BFB /* RandomColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247D27EA6A2800641BFB /* RandomColorExtension.swift */; };
 		1782F13527E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F13427E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift */; };
 		1782F13727E1E2C7008110F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782F13627E1E2C7008110F3 /* ContentView.swift */; };
 		1782F13927E1E2C8008110F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1782F13827E1E2C8008110F3 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholderExtension.swift; sourceTree = "<group>"; };
+		1781247B27EA54B800641BFB /* TopGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGenresView.swift; sourceTree = "<group>"; };
+		1781247D27EA6A2800641BFB /* RandomColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorExtension.swift; sourceTree = "<group>"; };
 		1782F13127E1E2C7008110F3 /* Spotify Clone By Chandan Hayaran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Clone By Chandan Hayaran.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1782F13427E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_Clone_By_Chandan_HayaranApp.swift; sourceTree = "<group>"; };
 		1782F13627E1E2C7008110F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,9 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1781247827EA34A300641BFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */,
+				1781247D27EA6A2800641BFB /* RandomColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1782F12827E1E2C7008110F3 = {
 			isa = PBXGroup;
 			children = (
+				1781247827EA34A300641BFB /* Extensions */,
 				1782F13327E1E2C7008110F3 /* Spotify Clone By Chandan Hayaran */,
 				1782F13227E1E2C7008110F3 /* Products */,
 			);
@@ -92,6 +108,7 @@
 				17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */,
 				17C0EBAD27E27ECD0001AA38 /* SearchView.swift */,
 				17C0EBAF27E280660001AA38 /* SongView.swift */,
+				1781247B27EA54B800641BFB /* TopGenresView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,12 +199,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1782F19527E1F9D3008110F3 /* RecentCard.swift in Sources */,
+				1781247E27EA6A2800641BFB /* RandomColorExtension.swift in Sources */,
 				1782F13727E1E2C7008110F3 /* ContentView.swift in Sources */,
 				1782F14A27E1EA98008110F3 /* HomeView.swift in Sources */,
 				17C0EBB027E280660001AA38 /* SongView.swift in Sources */,
 				17C0EBAE27E27ECD0001AA38 /* SearchView.swift in Sources */,
+				1781247A27EA34C300641BFB /* CustomPlaceholderExtension.swift in Sources */,
 				17D3CEB727E223BF00C68EA5 /* CurrentlyPlayingBar.swift in Sources */,
 				17D3CEB527E2182A00C68EA5 /* ArtistCard.swift in Sources */,
+				1781247C27EA54B800641BFB /* TopGenresView.swift in Sources */,
 				1782F13527E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

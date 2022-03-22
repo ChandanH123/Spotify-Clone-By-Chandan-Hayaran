@@ -53,7 +53,7 @@ struct CurrentlyPlayingBar: View {
                     
             }// hstack
             .background(RoundedRectangle(cornerRadius: 8)
-            .opacity(0.2))
+                            .opacity(0).background(.bar))
             .frame(height: 70)
             
             
