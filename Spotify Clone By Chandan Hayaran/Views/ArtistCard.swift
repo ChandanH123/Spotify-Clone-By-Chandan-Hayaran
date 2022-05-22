@@ -13,7 +13,8 @@ struct ArtistCard: View {
     
     
     var body: some View {
-        VStack {
+        VStack
+        {
             Image(artistImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -24,11 +25,9 @@ struct ArtistCard: View {
             Text(artistName)
                 .font(.custom("Gotham-Black", size: 14))
                 .foregroundColor(.white)
-       
-            Spacer()
-                    
-            }// hstack
-            .frame(width:160, height: 160)
+            }
+            
+            
             
     }
 }
@@ -38,6 +37,6 @@ struct ArtistCard_Previews: PreviewProvider {
         ArtistCard(artistImageName: "6-artist", artistName: "When Chai Met Toast")
             .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
-            .padding()
+            
     }
 }

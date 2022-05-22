@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1777E7CE283AB48C00C890A2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777E7CD283AB48C00C890A2 /* ViewModel.swift */; };
 		1781247A27EA34C300641BFB /* CustomPlaceholderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */; };
 		1781247C27EA54B800641BFB /* TopGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247B27EA54B800641BFB /* TopGenresView.swift */; };
 		1781247E27EA6A2800641BFB /* RandomColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247D27EA6A2800641BFB /* RandomColorExtension.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1777E7CD283AB48C00C890A2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholderExtension.swift; sourceTree = "<group>"; };
 		1781247B27EA54B800641BFB /* TopGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGenresView.swift; sourceTree = "<group>"; };
 		1781247D27EA6A2800641BFB /* RandomColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorExtension.swift; sourceTree = "<group>"; };
@@ -53,6 +55,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1777E7CB283AB46E00C890A2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1777E7CD283AB48C00C890A2 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1777E7CC283AB47600C890A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1781247827EA34A300641BFB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +82,6 @@
 		1782F12827E1E2C7008110F3 = {
 			isa = PBXGroup;
 			children = (
-				1781247827EA34A300641BFB /* Extensions */,
 				1782F13327E1E2C7008110F3 /* Spotify Clone By Chandan Hayaran */,
 				1782F13227E1E2C7008110F3 /* Products */,
 			);
@@ -82,7 +98,10 @@
 		1782F13327E1E2C7008110F3 /* Spotify Clone By Chandan Hayaran */ = {
 			isa = PBXGroup;
 			children = (
+				1777E7CC283AB47600C890A2 /* Models */,
+				1777E7CB283AB46E00C890A2 /* ViewModels */,
 				1782F19327E1EE9E008110F3 /* Spotify-Clone-By-Chandan-Hayaran-Info.plist */,
+				1781247827EA34A300641BFB /* Extensions */,
 				1782F14727E1E9F2008110F3 /* Views */,
 				1782F14827E1EA09008110F3 /* App */,
 				1782F13827E1E2C8008110F3 /* Assets.xcassets */,
@@ -208,6 +227,7 @@
 				17D3CEB727E223BF00C68EA5 /* CurrentlyPlayingBar.swift in Sources */,
 				17D3CEB527E2182A00C68EA5 /* ArtistCard.swift in Sources */,
 				1781247C27EA54B800641BFB /* TopGenresView.swift in Sources */,
+				1777E7CE283AB48C00C890A2 /* ViewModel.swift in Sources */,
 				1782F13527E1E2C7008110F3 /* Spotify_Clone_By_Chandan_HayaranApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

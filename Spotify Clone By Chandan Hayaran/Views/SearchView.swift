@@ -44,7 +44,7 @@ struct SearchView: View {
     
     var body: some View {
         VStack {
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     HStack {
                         Text("Search")
@@ -58,7 +58,7 @@ struct SearchView: View {
                             HStack {
                                 Image(systemName: "magnifyingglass")
                                     .foregroundColor(.black)
-                                    .font(Font.system(size: 40))
+                                    .font(Font.system(size: 35))
                                 Text("Artists, songs, or podcasts")
                                     .foregroundColor(.black)
                                     .opacity(0.7)
@@ -75,14 +75,16 @@ struct SearchView: View {
                     Text("Your top genres")
                         .font(Font.custom("Gotham-Black", size: 23))
                     Spacer()
-                }.padding()
+                    }.padding()
                 
                 
-                    LazyVGrid(columns: columns, spacing: 20) {
+                    LazyVGrid(columns: columns) {
                         ForEach((1...topGenresArray.count), id: \.self) { index in
                             TopGenresView(genreName: (topGenresArray[index-1]))
+                                
                             }
                         }
+                    .padding(.horizontal)
                             
                     HStack {
                         Text("Browse All")
@@ -91,12 +93,13 @@ struct SearchView: View {
                     }.padding()
                 
                 
-                    LazyVGrid(columns: columns, spacing: 20) {
+                    LazyVGrid(columns: columns) {
                         ForEach((1...browseAllArray.count), id: \.self) { index in
                             TopGenresView(genreName: (browseAllArray[index-1]))
                                 
                             }
                         }
+                    .padding(.horizontal)
                     
                     
                             
@@ -106,10 +109,9 @@ struct SearchView: View {
                 
                 
                 
-            }
+                }
         
-            CurrentlyPlayingBar(imageName: "1-song", songName:songNameArray[0])
-                .offset(y: -50)
+            
         }
 
     }
@@ -119,6 +121,6 @@ struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(searchInput: "")
             .preferredColorScheme(.dark)
-.previewInterfaceOrientation(.portraitUpsideDown)
+.previewInterfaceOrientation(.portrait)
     }
 }

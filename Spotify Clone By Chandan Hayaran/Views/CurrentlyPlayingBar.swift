@@ -16,45 +16,52 @@ struct CurrentlyPlayingBar: View {
     @State private var go = false
     
     var body: some View {
-        HStack {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 50, height: 50, alignment: .topLeading)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .foregroundColor(.white)
-                .padding(.top)
-                .padding(.leading)
-                .padding(.bottom)
-
-            Marquee {
-            Text(songName)
-                .font(.custom("Gotham-Black", size: 14))
-                .foregroundColor(.white)
-            }.marqueeDuration(10.0)
-            
-           
-            
-            HStack(spacing: 20) {
-                Image(systemName: "hifispeaker.and.appletv")
-                Toggle(isOn: $heartIcon, label: {
-                })
-                .toggleStyle(heartToggle())
-                
-                Toggle(isOn: $playIcon, label: {
-                })
-                .toggleStyle(playToggle())
-            }
-            .font(.system(size: 25))
-            .foregroundColor(.white)
-            .padding()
-       
-            Spacer()
+        ZStack {
+            Rectangle()
+                .foregroundColor(.clear)
+                .background(.bar)
+                            
+            HStack {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 55, height: 55)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .foregroundColor(.white)
                     
-            }// hstack
-            .background(RoundedRectangle(cornerRadius: 8)
-                            .opacity(0).background(.bar))
-            .frame(height: 70)
+
+                Marquee {
+                Text(songName)
+                    .font(.custom("Gotham-Black", size: 14))
+                    .foregroundColor(.white)
+                }.marqueeDuration(10.0)
+                
+               
+                
+                HStack(spacing: 20) {
+                    Image(systemName: "hifispeaker.and.appletv")
+                    Toggle(isOn: $heartIcon, label: {
+                    })
+                    .toggleStyle(heartToggle())
+                    
+                    Toggle(isOn: $playIcon, label: {
+                    })
+                    .toggleStyle(playToggle())
+                }
+                .padding(.horizontal)
+                .font(.system(size: 25))
+                .foregroundColor(.white)
+                
+           
+               
+                        
+                }// hstack
+            .padding()
+                
+        }
+        
+        .frame(height: 80)
+        .cornerRadius(10)
             
             
             
@@ -71,8 +78,11 @@ struct heartToggle: ToggleStyle {
  
             configuration.label
  
-            Image(systemName: configuration.isOn ? "heart.fill" : "heart")
-                .onTapGesture {
+            if configuration.isOn
+            {
+                Image(systemName: "heart.fill" )
+                    .foregroundColor(.red)
+                    .onTapGesture {
                     
                     if configuration.isOn {
                         print("heart.fill")
@@ -83,6 +93,23 @@ struct heartToggle: ToggleStyle {
 
                     configuration.isOn.toggle()
                 }
+            }
+            else
+            {
+                Image(systemName: "heart" )
+                    
+                    .onTapGesture {
+                    
+                    if configuration.isOn {
+                        print("heart.fill")
+                    }
+                    else {
+                        print("heart")
+                    }
+
+                    configuration.isOn.toggle()
+                }
+            }
         }
  
     }

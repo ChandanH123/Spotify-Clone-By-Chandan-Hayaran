@@ -10,9 +10,13 @@ import SwiftUI
 @main
 struct Spotify_Clone_By_Chandan_HayaranApp: App {
 
+    @ObservedObject var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark)
+                .environmentObject(viewModel)
         }
     }
 }

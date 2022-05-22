@@ -14,18 +14,21 @@ struct TopGenresView: View {
     var body: some View {
         HStack {
             
-            Text(genreName)
-                .font(.custom("Gotham-Black", size: 21))
-                .foregroundColor(.white)
+            VStack {
+                Text(genreName)
+                    .font(.custom("Gotham-Black", size: 21))
+                    .foregroundColor(.white)
                 .padding()
-                .offset(y: -40)
+                Spacer()
+            }
             
             Spacer()
                     
             }// hstack
-        .background(Rectangle().opacity(0).frame(height: 150).background(Color.random))
-            .frame(width: 200, height: 150)
+            .background(Rectangle().opacity(0).frame(height: 150).background(Color.random))
+            .frame(height: 130)
             .cornerRadius(8)
+            .padding(5)
             
             
             

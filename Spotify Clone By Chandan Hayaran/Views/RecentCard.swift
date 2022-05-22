@@ -17,7 +17,7 @@ struct RecentCard: View {
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 70, alignment: .topLeading)
+                .frame(width: 70, height: 70)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .foregroundColor(.white)
     
@@ -25,13 +25,15 @@ struct RecentCard: View {
                 .font(.custom("Gotham-Black", size: 14))
                 .foregroundColor(.white)
                 .frame(width: 80)
-       
             Spacer()
-                    
-            }// hstack
+            }
             .background(RoundedRectangle(cornerRadius: 8)
             .opacity(0.2))
-            .frame(width:150)
+            .padding(.horizontal, 10)
+            .multilineTextAlignment(.leading)
+            
+            
+            
             
             
     }// body
@@ -39,7 +41,7 @@ struct RecentCard: View {
 
 struct RecentCard_Previews: PreviewProvider {
     static var previews: some View {
-        RecentCard(imageName: "1-song", songName:"Karpur Gauram")
+        RecentCard(imageName: "1-song", songName:"When We Feel Young")
             .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
             .padding()
