@@ -102,8 +102,7 @@ struct SongView: View {
                         
                     }.padding()
                     
-                    Image(songImageName)
-                        .resizable()
+                    AsyncImage(url: URL(string: songImageName))
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 330, height: 330)
                         .clipShape(Rectangle())
@@ -193,7 +192,7 @@ struct SongView: View {
 
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {
-        SongView(artistName: "Nandish The Band", songImageName: "2-song", songName: "Karpur Gauram")
+        SongView(artistName: "Nandish The Band", songImageName: "https://i.scdn.co/image/ab67616d00001e02164b43d387d300e3a0e106f9", songName: "Karpur Gauram")
             .preferredColorScheme(.dark)
     }
 }

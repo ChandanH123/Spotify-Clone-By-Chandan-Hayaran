@@ -15,12 +15,15 @@ struct ArtistCard: View {
     var body: some View {
         VStack
         {
-            Image(artistImageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 160, height: 160, alignment: .topLeading)
-                .clipShape(Circle())
-                .foregroundColor(.white)
+            AsyncImage(url: URL(string: artistImageName)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 160, height: 160)
+            .clipShape(Circle())
+            .foregroundColor(.white)
     
             Text(artistName)
                 .font(.custom("Gotham-Black", size: 14))
@@ -34,7 +37,7 @@ struct ArtistCard: View {
 
 struct ArtistCard_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistCard(artistImageName: "6-artist", artistName: "When Chai Met Toast")
+        ArtistCard(artistImageName: "https://i.scdn.co/image/ab6761610000e5eb4118bddad7294394338dd36d", artistName: "Nandish The Band")
             .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
             

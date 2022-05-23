@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class ViewModel: ObservableObject {
     
@@ -62,5 +63,17 @@ func load<T: Decodable>(_ filename: String) -> T {
         return try decoder.decode(T.self, from: data)
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+    }
+}
+
+
+
+class SoundManager : ObservableObject {
+    var audioPlayer: AVPlayer?
+
+    func playSound(sound: String){
+        if let url = URL(string: sound) {
+            self.audioPlayer = AVPlayer(url: url)
+        }
     }
 }

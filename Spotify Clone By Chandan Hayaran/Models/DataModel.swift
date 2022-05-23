@@ -14,38 +14,39 @@ import Foundation
 
 
 // MARK: - Welcome
-struct DataModel: Codable {
+struct DataModel: Codable, Identifiable {
+    let id = UUID()
     let type: String
     let playlist: Playlist
 }
 
 // MARK: - Playlist
-struct Playlist: Codable {
+struct Playlist: Codable, Identifiable {
+    let id = UUID()
     let uri: String
-    let playlistDescription: String
+    let description: String
     let name: String
     let followers: Int
     let owner: Owner
     let tracks: [Track]
 
-    enum CodingKeys: String, CodingKey {
-        case uri
-        case playlistDescription = "description"
-        case name, followers, owner, tracks
-    }
+
 }
 
 // MARK: - Owner
-struct Owner: Codable {
+struct Owner: Codable, Identifiable {
+    let id = UUID()
     let name: String
     let uri: String
 }
 
 // MARK: - Track
-struct Track: Codable {
+struct Track: Codable, Identifiable {
+    let id = UUID()
     let name: String
     let uri: String
-    let artists: [Artist]
+    let artists: Artist
+    let coverArt: String
 }
 
 // MARK: - Artist
@@ -53,4 +54,5 @@ struct Artist: Codable {
     let id: String
     let name: String
     let uri: String
+    let artistImage: String
 }
