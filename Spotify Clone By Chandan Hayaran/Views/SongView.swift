@@ -9,11 +9,16 @@ import SwiftUI
 
 struct SongView: View {
     
+   
+   
+    @EnvironmentObject var soundManager: SoundManager
     @Environment (\.presentationMode) var presentationMode
+    @State var song1 = false
     
     var artistName: String
     var songImageName: String
     var songName: String
+    var songAudio: String
     
     @State private var heartIcon = false
     @State private var playIcon = false
@@ -102,8 +107,12 @@ struct SongView: View {
                         
                     }.padding()
                     
-                    AsyncImage(url: URL(string: songImageName))
-                        .aspectRatio(contentMode: .fill)
+                    AsyncImage(url: URL(string: songImageName)) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .aspectRatio(contentMode: .fill)
                         .frame(width: 330, height: 330)
                         .clipShape(Rectangle())
                     
@@ -157,14 +166,19 @@ struct SongView: View {
                     Image(systemName: "backward.end.fill")
                         .font(Font.system(size: 30))
                     Spacer()
-                    Toggle(isOn: $playIcon, label: {
-                    })
                     
-                    .toggleStyle(playToggle())
-                        .font(Font.system(size: 30))
-                        .foregroundColor(.black)
-                        .background(Circle().size(width: 80, height: 80)
-                                        .offset(x: -26, y: -25))
+                    Image(systemName: song1 ? "pause.circle.fill": "play.circle.fill")
+                        .font(.system(size: 80))
+                        .onTapGesture {
+                            soundManager.playSound(sound: songAudio)
+                            song1.toggle()
+                            
+                            if song1{
+                                soundManager.audioPlayer?.play()
+                            } else {
+                                soundManager.audioPlayer?.pause()
+                            }
+                    }
                         
                     Spacer()
                     Image(systemName: "forward.end.fill")
@@ -192,7 +206,8 @@ struct SongView: View {
 
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {
-        SongView(artistName: "Nandish The Band", songImageName: "https://i.scdn.co/image/ab67616d00001e02164b43d387d300e3a0e106f9", songName: "Karpur Gauram")
+        SongView(artistName: "Nandish The Band", songImageName: "https://i.scdn.co/image/ab67616d00001e02164b43d387d300e3a0e106f9", songName: "Karpur Gauram", songAudio: "https://p.scdn.co/mp3-preview/5Sb3QmHQlYv2rMAG4eB4n0?si=6c81515a74af45be")
             .preferredColorScheme(.dark)
+            .environmentObject(SoundManager())
     }
 }

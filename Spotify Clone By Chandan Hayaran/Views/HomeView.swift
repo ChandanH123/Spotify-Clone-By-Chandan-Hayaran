@@ -46,7 +46,7 @@ struct HomeView: View {
                     
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.items[0].playlist.tracks) { track in
-                        NavigationLink(destination: SongView(artistName: track.artists.name, songImageName: track.coverArt, songName: track.name)) {
+                        NavigationLink(destination: SongView(artistName: track.artists.name, songImageName: track.coverArt, songName: track.name, songAudio: track.uri)) {
                             RecentCard(imageName: track.coverArt, songName: (track.name))
 
                         }
