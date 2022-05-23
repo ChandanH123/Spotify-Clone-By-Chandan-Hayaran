@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1766C15C283B6AFE00F5F439 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = "Spotify Clone By Chandan Hayaran/DataModel.swift"; sourceTree = SOURCE_ROOT; };
+		1766C15C283B6AFE00F5F439 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = "Spotify Clone By Chandan Hayaran/Models/DataModel.swift"; sourceTree = SOURCE_ROOT; };
 		1766C162283B7DF600F5F439 /* playlist_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist_data.json; path = ../../../../playlist_data.json; sourceTree = "<group>"; };
 		1777E7CD283AB48C00C890A2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholderExtension.swift; sourceTree = "<group>"; };
@@ -67,20 +67,20 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		1766C164283B82CD00F5F439 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1766C15C283B6AFE00F5F439 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1777E7CB283AB46E00C890A2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				1777E7CD283AB48C00C890A2 /* ViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		1777E7CC283AB47600C890A2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1766C15C283B6AFE00F5F439 /* DataModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1781247827EA34A300641BFB /* Extensions */ = {
@@ -111,8 +111,8 @@
 		1782F13327E1E2C7008110F3 /* Spotify Clone By Chandan Hayaran */ = {
 			isa = PBXGroup;
 			children = (
+				1766C164283B82CD00F5F439 /* Models */,
 				1766C15E283B7CC200F5F439 /* Utilities */,
-				1777E7CC283AB47600C890A2 /* Models */,
 				1777E7CB283AB46E00C890A2 /* ViewModels */,
 				1782F19327E1EE9E008110F3 /* Spotify-Clone-By-Chandan-Hayaran-Info.plist */,
 				1781247827EA34A300641BFB /* Extensions */,
