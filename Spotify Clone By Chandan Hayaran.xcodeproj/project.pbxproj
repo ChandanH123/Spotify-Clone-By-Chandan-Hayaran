@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1766C15D283B6AFE00F5F439 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766C15C283B6AFE00F5F439 /* DataModel.swift */; };
-		1766C163283B7DF600F5F439 /* playlist_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1766C162283B7DF600F5F439 /* playlist_data.json */; };
 		1777E7CE283AB48C00C890A2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777E7CD283AB48C00C890A2 /* ViewModel.swift */; };
 		1781247A27EA34C300641BFB /* CustomPlaceholderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */; };
 		1781247C27EA54B800641BFB /* TopGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781247B27EA54B800641BFB /* TopGenresView.swift */; };
@@ -24,11 +23,11 @@
 		17D3CEB527E2182A00C68EA5 /* ArtistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3CEB427E2182A00C68EA5 /* ArtistCard.swift */; };
 		17D3CEB727E223BF00C68EA5 /* CurrentlyPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */; };
 		17D3CEBD27E22EB500C68EA5 /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = 17D3CEBC27E22EB500C68EA5 /* Marquee */; };
+		17DACB01283BB44100D289B3 /* playlist_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 17DACB00283BB44100D289B3 /* playlist_data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1766C15C283B6AFE00F5F439 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = "Spotify Clone By Chandan Hayaran/Models/DataModel.swift"; sourceTree = SOURCE_ROOT; };
-		1766C162283B7DF600F5F439 /* playlist_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist_data.json; path = ../../../../playlist_data.json; sourceTree = "<group>"; };
 		1777E7CD283AB48C00C890A2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1781247927EA34C300641BFB /* CustomPlaceholderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholderExtension.swift; sourceTree = "<group>"; };
 		1781247B27EA54B800641BFB /* TopGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGenresView.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		17C0EBAF27E280660001AA38 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		17D3CEB427E2182A00C68EA5 /* ArtistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCard.swift; sourceTree = "<group>"; };
 		17D3CEB627E223BF00C68EA5 /* CurrentlyPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyPlayingBar.swift; sourceTree = "<group>"; };
+		17DACB00283BB44100D289B3 /* playlist_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = playlist_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		1766C15E283B7CC200F5F439 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1766C162283B7DF600F5F439 /* playlist_data.json */,
+				17DACB00283BB44100D289B3 /* playlist_data.json */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,8 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1782F13C27E1E2C8008110F3 /* Preview Assets.xcassets in Resources */,
-				1766C163283B7DF600F5F439 /* playlist_data.json in Resources */,
 				1782F13927E1E2C8008110F3 /* Assets.xcassets in Resources */,
+				17DACB01283BB44100D289B3 /* playlist_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

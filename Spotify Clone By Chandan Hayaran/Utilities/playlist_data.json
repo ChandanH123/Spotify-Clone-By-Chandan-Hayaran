@@ -1,0 +1,91 @@
+[
+    {
+        "type": "playlist",
+        "playlist": {
+            "uri": "spotify:playlist:7bYPKDVKc9sqFMIGA2xSNk",
+            "description": "",
+            "name": "My Playlist",
+            "followers": 0,
+            "owner": {
+                "name": "Chandan",
+                "uri": "spotify:user:v3iyjehc7bnx5y7o84u9cnwct"
+            },
+            "tracks": [
+                {
+                    "name": "Karpur Gauram",
+                    "uri": "https://gq-sycdn.kuwo.cn/d4c95da7181fde688a21cff2b9c64075/628b76bf/resource/n3/19/82/3835342417.mp3",
+                    "artists":
+                        {
+                            "id": "0qadLsdAO0gkUwOPqatIO1",
+                            "name": "Nandish the Band",
+                            "uri": "spotify:artist:0qadLsdAO0gkUwOPqatIO1",
+                            "artistImage": "https://i.scdn.co/image/ab6761610000e5eb4118bddad7294394338dd36d"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d00001e02164b43d387d300e3a0e106f9"
+                },
+                {
+                    "name": "When We Feel Young",
+                    "uri": "https://ex-sycdn.kuwo.cn/9401fc583d94e69a7a3855829df77cad/628b7607/resource/n1/83/42/4106591721.mp3",
+                    "artists":
+                        {
+                            "id": "04hYGGSjYtLekuuJXEGrIl",
+                            "name": "When Chai Met Toast",
+                            "uri": "spotify:artist:04hYGGSjYtLekuuJXEGrIl",
+                            "artistImage": "https://i.scdn.co/image/ab6761610000e5eb3a051eafe3d40dc9ac96e63a"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d0000b27345d0b757d4765010d2fa5946"
+                },
+                {
+                    "name": "Every Second",
+                    "uri": "https://win-web-nf01-sycdn.kuwo.cn/9c922ab7da96ca2376f6f1bd6027b333/628b7692/resource/n3/62/37/4007888539.mp3",
+                    "artists":
+                        {
+                            "id": "5BS8KSKJPeLeXfABQx0bXl",
+                            "name": "Mina Okabe",
+                            "uri": "spotify:artist:5BS8KSKJPeLeXfABQx0bXl",
+                            "artistImage": "https://lastfm.freetls.fastly.net/i/u/ar0/c076aeb6fa8ef9d09db8d371ef2963b3.jpg"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d0000b273d408e77f467aed0d8b31fef2"
+                },
+                {
+                    "name": "One More Light",
+                    "uri": "https://win-web-nf01-sycdn.kuwo.cn/5e6e7030cc729829e388e0f23e76726c/628b7750/resource/n3/24/44/2783039028.mp3",
+                    "artists":
+                        {
+                            "id": "6XyY86QOPPrYVGvF9ch6wz",
+                            "name": "Linkin Park",
+                            "uri": "spotify:artist:6XyY86QOPPrYVGvF9ch6wz",
+                            "artistImage": "https://i.scdn.co/image/ab6761610000e5eb34e5aa6afc1ba147bfbb0677"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d0000b273145e1cf12538f5666511237d"
+                },
+                {
+                    "name": "My Universe",
+                    "uri": "https://win-web-nf01-sycdn.kuwo.cn/90cdd1e0141578ce0849c336c6dacb0e/628b7750/resource/n3/16/57/3943129894.mp3",
+                    "artists":
+                        {
+                            "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                            "name": "Coldplay & BTS",
+                            "uri": "spotify:artist:4gzpq5DPGxSnKTe4SA8HAU",
+                            "artistImage": "https://i.scdn.co/image/ab6761610000e5eb865a3301762a8fce048cb469"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d0000b273f60a9b7e2abafc38da31f575"
+                },
+                {
+                    "name": "Alag Aasmaan",
+                    "uri": "https://ew-sycdn.kuwo.cn/2915d51efca1ad42303d1c2b0d6cf60d/628b7750/resource/n2/21/44/2923268013.mp3",
+                    "artists":
+                        {
+                            "id": "4gdMJYnopf2nEUcanAwstx",
+                            "name": "Anuv Jain",
+                            "uri": "spotify:artist:4gdMJYnopf2nEUcanAwstx",
+                            "artistImage": "https://i.scdn.co/image/ab6761610000e5eb4e03cfdab41521ee76c44db2"
+                        },
+                    "coverArt": "https://i.scdn.co/image/ab67616d0000b273df2fdeac8ff21691c02ece78"
+                }
+            ]
+        }
+    }
+]
+
+
